@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
+
+// hello.blade.php 파일 보여주기
+Route::get('/hello','HomeController@hello');
+
+Route::get('/contact', 'HomeController@contact');
