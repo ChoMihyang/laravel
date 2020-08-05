@@ -39,3 +39,22 @@
        php artisan make:controller <name>
     ```
     
+### 2020-08-05(수)
+1. 마이그레이션
+    - 데이터베이스에 대한 버전 컨트롤 역할
+    - 데이터베이스 수정과 협업 시 스키마 공유 가능
+    
+2. 마이그레이션 메서드 - up, down 
+    - up : 데이터베이스에 테이블, 컬럼, 인덱스를 추가
+    - down : up 메서드의 동작을 취소 
+    
+3. 마이그레이션 동작
+    - 실행하기
+    ```bash
+       php artisan migrate 
+   ```
+   - 되돌리기(롤백)
+   ```bash
+       php artisan migrate:rollback
+   ```
+    
