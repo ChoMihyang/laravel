@@ -58,3 +58,25 @@
        php artisan migrate:rollback
    ```
     
+2020-08-08(토)
+1. 마이그레이션 생성
+    - php artisan make:migration [name]
+    - 복수형 파일명
+    - database/migrations 디렉토리에 생성
+    
+2. 테이블 생성
+    - migration 의 up() 메서드 사용
+    - 컬럼 타입
+    ```bash
+       1) 자동 증가      : $table->bigIncrements('id'); 
+       2) BIGINT 컬럼    : $table->bigInteger('votes');
+       3) LONGTEXT 컬럼  : $table->longText('description');
+       4) TIMESTAMP 컬럼 : $table->timestamps();
+       ...
+   ```
+3. 모델 생성 
+    - php artisan make:model [name]
+    - 단수형 파일명
+
+4. tailwindcss 설치
+
