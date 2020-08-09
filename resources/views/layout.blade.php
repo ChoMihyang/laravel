@@ -6,9 +6,11 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title', 'Laravel')</title>
+    <link rel="stylesheet" href="{{ mix('css/tailwind.css') }}">
 </head>
 <body>
-
+<div class="bg-red-700">hello</div>
 @yield('content')
+
 </body>
 </html>

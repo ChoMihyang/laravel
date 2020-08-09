@@ -58,7 +58,7 @@
        php artisan migrate:rollback
    ```
     
-2020-08-08(토)
+###2020-08-08(토)
 1. 마이그레이션 생성
     - php artisan make:migration [name]
     - 복수형 파일명
@@ -79,4 +79,9 @@
     - 단수형 파일명
 
 4. tailwindcss 설치
+
+###2020-08-09(일)
+
+1. tailwindcss 설치
+
 

@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26ccb84e-fde6-46e2-ac5f-135a2a35bf5d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/tailwind.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/projects/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +178,7 @@
       <workItem from="1596555295312" duration="6703000" />
       <workItem from="1596640049767" duration="5054000" />
       <workItem from="1596890150139" duration="6596000" />
-      <workItem from="1596898793368" duration="5766000" />
+      <workItem from="1596898793368" duration="6106000" />
     </task>
     <servers />
   </component>
