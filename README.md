@@ -84,4 +84,23 @@
 
 1. tailwindcss 설치
 
-
+###2020-08-10(월)
+1. MVC 파일 생성하기
+    - 모델 생성(migration file, controller 포함)
+    ```bash
+    php artisan make:model <모델명> -c -m    
+    ```
+2. routes
+    - /tasks 페이지에서 TaskController 클래스의 index 메서드 실행
+    ```bash
+    Route::get('/tasks', 'TaskController@index');    
+    ```
+3. Tip) blade.php
+    ```bash
+    @section('title')
+       Create Task
+    @endsection
+   <=> 
+    @section('title', 'Create Task')
+    @endsection
+    ```

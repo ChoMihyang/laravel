@@ -11,13 +11,6 @@ class TaskController extends Controller
     }
     public function create(){
         return view('tasks.create');
-    }
-    public function store(Request $request){
-
-        Task::create([
-            'title' => $request->input('title'),
-            'body' =>  $request->input('body')
-            ]);
-        return redirect('/tasks');
-    }
 }
+    }
+
