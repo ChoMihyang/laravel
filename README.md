@@ -104,3 +104,13 @@
     @section('title', 'Create Task')
     @endsection
     ```
+   
+###2020-08-11(화)
+1. 라라벨 폼 만들기
+    - tasks Table 생성
+    - Route::get / Route::post 사용
+    - csrf 사용
+    
+2. 폼 submit 처리하기
+    - tailwindcss 활용
+    - {{ }} 사용

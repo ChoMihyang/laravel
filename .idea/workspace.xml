@@ -5,7 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_09_145737_create_tasks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_09_145737_create_tasks_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Task.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/tasks/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tasks/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/tasks/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tasks/index.blade.php" afterDir="false" />
@@ -185,7 +185,8 @@
       <workItem from="1596640049767" duration="5054000" />
       <workItem from="1596890150139" duration="6596000" />
       <workItem from="1596898793368" duration="6106000" />
-      <workItem from="1597075391830" duration="2505000" />
+      <workItem from="1597075391830" duration="2635000" />
+      <workItem from="1597159224000" duration="4832000" />
     </task>
     <servers />
   </component>
