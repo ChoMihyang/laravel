@@ -7,23 +7,34 @@ use App\Task;
 
 class TaskController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         // Task 테이블의 모든 정보를 조회
         $tasks = Task::all();
-        return view('tasks.index',[
+        return view('tasks.index', [
             'tasks' => $tasks
         ]);
     }
-    public function create(){
+
+    public function create()
+    {
         return view('tasks.create');
-}
-    public function store(Request $request){
+    }
 
-        Task::create([
-            'title'=>$request->input('title'),
-            'body'=>$request->input('body')
+    public function store(Request $request)
+    {
+
+        $task = Task::create([
+            'title' => $request->input('title'),
+            'body' => $request->input('body')
         ]);
-        return redirect('/tasks');
-    }
+        return redirect('/tasks/'.$task->id);
     }
 
+    public function show(Task $task)
+    {
+        return view('tasks.show', [
+            'task' => $task
+        ]);
+    }
+}

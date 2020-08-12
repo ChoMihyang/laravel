@@ -28,3 +28,5 @@ Route::get('/tasks/create', 'TaskController@create');
 
 Route::post('/tasks', 'TaskController@store');
 
+Route::get('/tasks/{task}', 'TaskController@show');
+
