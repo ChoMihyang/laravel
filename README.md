@@ -118,3 +118,20 @@
 ###2020-08-12(수)
 1. task 디테일 페이지
     - id 값 삽입 -> view 기능 구현
+
+###2020-10-11(일)
+1. task 수정하기
+    ```bash
+     Route::get('/tasks/{task}/edit', 'TaskController@edit'); 
+   ```
+   - @method('PUT') 추가
+   - edit(view)의 action -> /tasks/{{ $task->id }}/edit
+   - show(view)의 action -> /tasks/{{ $task->id }}
+   - TaskController 내 edit 메서드 생성
+   
+2. 수정 내용 업데이트하기
+    ```bash
+     Route::put('/tasks/{task}', 'TaskController@update'); 
+   ```
+   - TaskController 내 update 메서드 생성
+   -> request('title'); 추가
