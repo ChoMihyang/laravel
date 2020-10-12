@@ -135,3 +135,17 @@
    ```
    - TaskController 내 update 메서드 생성
    -> request('title'); 추가
+
+###2020-10-12(월)
+1. task 삭제하기
+    ```bash
+     Route::delete('/tasks/{task}', 'TaskController@destroy'); 
+   ```
+   - @method('DELETE')추가
+   - @csrf 추가
+   - TaskController 내 destroy 메서드 생성 -> delete() 함수 사용
+   - delete 버튼 생성
+   
+2. task 만들기 버튼 생성
+    - index.blade 파일 수정
+        - a태그 사용 -> /tasks/create 이동
