@@ -149,3 +149,21 @@
 2. task 만들기 버튼 생성
     - index.blade 파일 수정
         - a태그 사용 -> /tasks/create 이동
+        
+3. 폼 Validation
+    - 공란 상태로 submit 되는 것을 방지
+    - create.blade와 edit.blade 파일 수정
+    ```bash
+    @error('title')
+            <small class="text-red-700">{{ $message }}</small>
+    @enderror  
+    ```
+###2020-10-15(목)
+1. 폼 기존 값 유지하기
+  - blade 파일에서 {{ }} 안에는 php코드를 적는다.
+  - old() : 그 전에 사용했던 값을 가져올 수 있음
+  - create.blade와 edit.blade 파일 수정
+    ```bash
+      value="{{ old('title') ? old('title') : '' }}"
+      {{ old('body') ? old('body') : '' }}
+    ```

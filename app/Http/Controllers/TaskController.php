@@ -21,12 +21,16 @@ class TaskController extends Controller
         return view('tasks.create');
     }
 
-    public function store(Request $request)
+    public function store()
     {
-
+        request()->validate([
+            'title'=>'required',
+            'body'=>'required'
+        ]);
+//        $task = Task::create(request(['title', 'body']));
         $task = Task::create([
-            'title' => $request->input('title'),
-            'body' => $request->input('body')
+            'title' => request('title'),
+            'body' => request('body')
         ]);
         return redirect('/tasks/'.$task->id);
     }
@@ -45,11 +49,12 @@ class TaskController extends Controller
     }
 
     public function update(Task $task){
-        request('title');
-        $task->update([
-            'title' => request('title'),
-            'body' => request('body')
+        request()->validate([
+            'title'=>'required',
+            'body'=>'required'
         ]);
+
+        $task->update(request(['title', 'body']));
         return redirect('/tasks/'.$task->id);
     }
 
