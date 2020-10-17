@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'Laravel')</title>
-    <link rel="stylesheet" href="{{ mix('css/tailwind.css') }}">
+    <link href="{{ asset('css/tailwind.css') }}" rel="stylesheet">
 </head>
 <body>
 <div class="container mx-auto">

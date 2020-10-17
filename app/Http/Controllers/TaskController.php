@@ -27,11 +27,12 @@ class TaskController extends Controller
             'title'=>'required',
             'body'=>'required'
         ]);
+        $values = request(['title', 'body']);
+
+        $values['user_id'] = auth()->id();
 //        $task = Task::create(request(['title', 'body']));
-        $task = Task::create([
-            'title' => request('title'),
-            'body' => request('body')
-        ]);
+        $task = Task::create($values);
+
         return redirect('/tasks/'.$task->id);
     }
 

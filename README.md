@@ -167,3 +167,22 @@
       value="{{ old('title') ? old('title') : '' }}"
       {{ old('body') ? old('body') : '' }}
     ```
+###2020-10-17(토)
+1. 로그인 기능 만들기
+    - php artisan make:auth
+
+2. 계정이 없는 상태에서도 게시글이 보이는 에러
+    - Routh::get('/tasks', 'TaskController@index')->middleware('auth');
+    - 여러 개를 입력해야 할 때
+        - Route::prefix('tasks')->middleware('auth')->group(function(){ // Route 경로 });
+
+3. 페이지에 공통 헤더 추가하기
+    - 라라벨 제공 app.blade.php 의 stylesheet 사용하기
+        - create, edit, show.blade.php 수정
+        - @extends('layouts.app') 수정
+    - app.blade.php 에 link 태그 추가
+        ```bash
+        <link rel="stylesheet" href="{{ asset('css/tailwind.css') }}">
+        ```
+4. 테스크 권한(1) 진행중
+
