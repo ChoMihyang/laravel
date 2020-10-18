@@ -10,7 +10,8 @@ class TaskController extends Controller
     public function index()
     {
         // Task 테이블의 모든 정보를 조회
-        $tasks = Task::latest()->where('user_id', auth()->id())->get();
+        $tasks = auth()->user()->tasks()->latest()->get();
+//        Task::latest()->where('user_id', auth()->id())->get();
         return view('tasks.index', [
             'tasks' => $tasks
         ]);

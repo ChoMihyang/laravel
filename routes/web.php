@@ -38,6 +38,7 @@ Route::prefix('tasks')->middleware('auth')->group(function(){
     Route::delete('/{task}', 'TaskController@destroy');
 });
 
+Route::resource('task', 'TaskController')->middleware('auth');
 
 Auth::routes();
 

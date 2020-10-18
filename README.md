@@ -224,3 +224,28 @@
   ```
 
 3. 라우트 Resource
+- web.php 
+- Route::prefix('tasks')->middleware('auth') 에서 그룹으로 묶인
+  모든 Route 들을 하나로 만들기
+  ```bash
+  Route::resource('task', 'TaskController')->middleware('auth');
+  ```
+
+4. 라라벨 모델 관계(Relation) 설정
+    1) 사용자는 많은 Task를 가진다. (User.php)
+    ```bash
+       public function tasks(){
+               return $this->hasMany(Task::class);
+           }
+   ```
+   2) 하나의 Task는 한 명의 유저에 속한다. (Task.php)
+   ```bash
+    public function user(){
+            return $this->belongsTo(User::class);
+        }
+   ```
+   3) Task 테이블의 모든 정보를 조회 (TaskController.php -> index()
+    ```bash
+    $tasks = auth()->user()->tasks()->latest()->get();
+    ```
+
