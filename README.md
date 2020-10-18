@@ -184,5 +184,43 @@
         ```bash
         <link rel="stylesheet" href="{{ asset('css/tailwind.css') }}">
         ```
-4. 테스크 권한(1) 진행중
 
+  
+###2020-10-18
+1. 테스크 권한(1)
+- 계정에 따라 자신이 쓴 게시물만 보기
+    1) 'user_id'테이블 추가
+    ```bash
+     $table->unsignedBigInteger('user_id');
+     $table->foreign('user_id')->references('id')->on('users');
+  ```
+    2) 자신이 쓴 게시물만 조회
+    ```bash
+     $tasks = Task::latest()->where('user_id', auth()->id())->get();  
+  ```
+
+2. 테스트 권한(2)
+- 계정에 따라 게시물 수정, 삭제 권한 주기
+    1) 로그인한 유저가 태스크를 소유하고 있지 않다면 -> 접근 금지
+    2) show, edit, update, destroy 메서드에 추가
+    ```bash
+    if(auth()->id() != $task->user_id){ abort(403); }
+  ```
+  ```bash
+    abort_if(auth()->id() != $task->user_id, 403);
+  ```
+  ```bash
+    abort_if(!auth()->user()->owns($task), 403);
+  ```
+  ```bash
+    abort_unless(auth()->user()->owns($task), 403);
+  ```
+  
+  2) owns 메서드 추가 (User.php)
+  ```bash
+  public function owns(Task $task){
+          return auth()->id() == $task->user_id;
+      }
+  ```
+
+3. 라우트 Resource
